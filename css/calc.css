@@ -1,0 +1,450 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+/* Barra de navegación */
+nav {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.calculator {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10; /* Asegura que la calculadora esté encima de los círculos */
+}
+
+.screen {
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    min-height: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.input-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    background-color: #f7f7f7;
+    outline: none;
+}
+
+.input-container input:focus {
+    border-color: #4e73df;
+}
+
+.info {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.info p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3b5bcb;
+}
+
+.button:active {
+    background-color: #2a4879;
+}
+
+.button.clear {
+    background-color: #e74a3b;
+}
+
+.button.clear:hover {
+    background-color: #d84f3e;
+}
+
+/* Círculos en el fondo */
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    z-index: 0; /* Los círculos están al fondo */
+}
+
+.background::before, .background::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: black; /* Cambié el color a negro */
+}
+
+.background::before {
+    width: 750px;
+    height: 750px;
+    top: -22%;
+    left: -4%;
+}
+
+.background::after {
+    width: 760px;
+    height: 760px;
+    bottom: -30%;
+    right: -5%;
+}
+
+.background .circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: black; /* Todos los círculos serán negros */
+}
+
+.circle-1 {
+    width: 260px;
+    height: 260px;
+    top: 15%;
+    left: 32%;
+}
+
+.circle-2 {
+    width: 50px;
+    height: 50px;
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+    background-color: black;
+    top: 10%;
+    left: 2%;
+}
+
+.circle-3 {
+    width: 40px;
+    height: 40px;
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+    background-color: black;
+    top: 84%;
+    left: 90%;
+}
+
+.circle-4 {
+    width: 20px;
+    height: 20px;
+    top: 10%;
+    left: 50%;
+    background-color: black;
+    border: 4px solid #DD233F;
+}
+
+.circle-5 {
+    width: 150px;
+    height: 150px;
+    top: -10%;
+    left: 60%;
+    background-color: black;
+}
+
+.circle-6 {
+    width: 180px;
+    height: 180px;
+    top: 75%;
+    right: 5%;
+}
+
+.circle-7 {
+    width: 20px;
+    height: 20px;
+    top: 54%;
+    left: 22%;
+    background-color: black;
+}
+
+.circle-8 {
+    width: 20px;
+    height: 20px;
+    top: 54%;
+    left: 26%;
+    background-color: black;
+}
+
+.circle-9 {
+    width: 20px;
+    height: 20px;
+    top: 54%;
+    left: 30%;
+    background-color: black;
+}
+
+.circle-10 {
+    width: 20px;
+    height: 20px;
+    top: 60%;
+    left: 22%;
+    background-color: black;
+}
+
+.circle-11 {
+    width: 20px;
+    height: 20px;
+    top: 60%;
+    left: 26%;
+    background-color: black;
+}
+
+.circle-12 {
+    width: 20px;
+    height: 20px;
+    top: 60%;
+    left: 30%;
+    background-color: black;
+}
+
+.circle-13 {
+    width: 20px;
+    height: 20px;
+    top: 66%;
+    left: 22%;
+    background-color: black;
+}
+
+.circle-14 {
+    width: 20px;
+    height: 20px;
+    top: 66%;
+    left: 26%;
+    background-color: black;
+}
+
+.circle-15 {
+    width: 20px;
+    height: 20px;
+    top: 66%;
+    left: 30%;
+    background-color: black;
+}
+
+.circle-16 {
+    width: 100px;
+    height: 100px;
+    top: 90%;
+    left: -1%;
+    background-color: black;
+}
+
+.circle-17 {
+    width: 30px;
+    height: 30px;
+    top: 76%;
+    left: 2%;
+    background-color: black;
+    border: 5px solid #DD233F;
+}
+
+.circle-18 {
+    width: 50px;
+    height: 50px;
+    top: 86%;
+    left: 10%;
+    background-color: black;
+}
+
+.circle-19 {
+    width: 50px;
+    height: 50px;
+    top: 86%;
+    left: 10%;
+    background-color: black;
+}
+
+.circle-20 {
+    width: 20px;
+    height: 20px;
+    top: 81%;
+    left: 62%;
+    background-color: black;
+}
+
+.circle-21 {
+    width: 20px;
+    height: 20px;
+    top: 81%;
+    left: 66%;
+    background-color: black;
+}
+
+.circle-22 {
+    width: 20px;
+    height: 20px;
+    top: 81%;
+    left: 70%;
+    background-color: black;
+}
+
+.circle-23 {
+    width: 20px;
+    height: 20px;
+    top: 87%;
+    left: 62%;
+    background-color: black;
+}
+
+.circle-24 {
+    width: 20px;
+    height: 20px;
+    top: 87%;
+    left: 66%;
+    background-color: black;
+}
+
+.circle-25 {
+    width: 20px;
+    height: 20px;
+    top: 87%;
+    left: 70%;
+    background-color: black;
+}
+
+.circle-26 {
+    width: 20px;
+    height: 20px;
+    top: 93%;
+    left: 62%;
+    background-color: black;
+}
+
+.circle-27 {
+    width: 20px;
+    height: 20px;
+    top: 93%;
+    left: 66%;
+    background-color: black;
+}
+
+.circle-28 {
+    width: 20px;
+    height: 20px;
+    top: 93%;
+    left: 70%;
+    background-color: black;
+}
+
+.circle-29 {
+    width: 30px;
+    height: 30px;
+    top: 5%;
+    left: 95%;
+    background-color: black;
+    border: 5px solid #DD233F;
+}
+
+.circle-30 {
+    width: 40px;
+    height: 40px;
+    top: 15%;
+    left: 75%;
+    background-color: black;
+}
+
+.circle-31 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: 95%;
+    background-color: black;
+}
+
+.circle-32 {
+    width: 20px;
+    height: 20px;
+    top: 30%;
+    left: 98%;
+    background-color: black;
+}
+
+.circle-33 {
+    width: 20px;
+    height: 20px;
+    top: 35%;
+    left: 98%;
+    background-color: black;
+}
+
+.circle-34 {
+    width: 20px;
+    height: 20px;
+    top: 40%;
+    left: 98%;
+    background-color: black;
+}

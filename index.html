@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas</title>
+    <title>Conceptos Básicos de Desarrollo Web</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        Conceptos Básicos de Desarrollo Web
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>¿Qué es HTML y cuál es su función principal en el desarrollo web?</h2>
+            <div class="answer">
+                HTML es el lenguaje que usamos para crear la estructura de una página web. Sirve para organizar textos, imágenes y enlaces.
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué son las etiquetas HTML y cómo se utilizan?</h2>
+            <div class="answer">
+                Son elementos que marcan el contenido de la web. Se usan con apertura y cierre, por ejemplo: 
+                <div class="example">
+                    <code>&lt;h1&gt;Título&lt;/h1&gt;</code>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Ejemplos de algunas etiquetas HTML más comunes</h2>
+            <div class="answer">
+                <ul>
+                    <li><code>&lt;p&gt;</code>: Párrafo</li>
+                    <li><code>&lt;a href="url"&gt;</code>: Enlace</li>
+                    <li><code>&lt;img src="imagen.jpg"&gt;</code>: Imagen</li>
+                    <li><code>&lt;ul&gt; &lt;li&gt;</code>: Lista</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué es CSS y cómo se utiliza para dar estilo a una página web?</h2>
+            <div class="answer">
+                CSS es el lenguaje que usamos para dar colores, tamaños y estilos a la web.
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Cuáles son las propiedades más importantes de CSS?</h2>
+            <div class="answer">
+                <ul>
+                    <li><code>color</code>: Color del texto.</li>
+                    <li><code>background-color</code>: Color de fondo.</li>
+                    <li><code>font-size</code>: Tamaño del texto.</li>
+                    <li><code>margin</code> y <code>padding</code>: Espaciado entre elementos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Explica el modelo de caja (box model) en CSS</h2>
+            <div class="answer">
+                Todo elemento en una página tiene contenido, espacio interno (padding), borde y espacio externo (margin).
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué es el diseño responsivo y cómo se logra con CSS?</h2>
+            <div class="answer">
+                Es hacer que la web se vea bien en cualquier pantalla (computadora, celular, tablet) usando CSS flexible y media queries.
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué es JavaScript y cómo se integra en el desarrollo web?</h2>
+            <div class="answer">
+                JavaScript es un lenguaje que permite agregar acciones y cambios en la página web.
+            </div>
+        </section>
+
+        <section>
+            <h2>Explica cómo JavaScript interactúa con el HTML y CSS a través del DOM (Document Object Model)</h2>
+            <div class="answer">
+                El DOM es la estructura de la web en forma de árbol. JavaScript la usa para cambiar textos, colores o mostrar/ocultar elementos.
+            </div>
+        </section>
+
+        <section>
+            <h2>Proporciona ejemplos de cómo JavaScript puede hacer que una página web sea interactiva</h2>
+            <div class="answer">
+                <button class="btn-interactive" onclick="toggleVisibility()">Mostrar más información</button>
+                <div id="interactive-content" class="interactive-content">
+                    <p>¡Has hecho clic en el botón! Ahora puedes ver este contenido.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué es Git y por qué es importante para el desarrollo web?</h2>
+            <div class="answer">
+                Git es un sistema que guarda versiones del código para trabajar en equipo y evitar perder cambios importantes.
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Cómo se usa Git para el control de versiones en proyectos de desarrollo web?</h2>
+            <div class="answer">
+                Con Git podemos guardar cambios (<code>commit</code>), subirlos (<code>push</code>), descargarlos (<code>pull</code>) y trabajar en versiones separadas (<code>branch</code>).
+            </div>
+        </section>
+
+        <section>
+            <h2>¿Qué es GitHub y cómo facilita la colaboración en proyectos web?</h2>
+            <div class="answer">
+                GitHub es un sitio donde podemos guardar proyectos con Git y trabajar con otras personas en línea.
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        Desarrollo Web 2025 &copy; Todos los derechos reservados a Kevin Alvarado.
+    </footer>
+
+    <script>
+        function toggleVisibility() {
+            const content = document.getElementById('interactive-content');
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
 </body>
+
 </html>
